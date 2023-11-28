@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contracts</title>
+</head>
+<body>
+<div>
+    <div class="divButton">
+        <div class="but">
+            <form action="order.html">
+                <button>Создать договор</button>
+            </form>
+        </div>
+       <div class="but">
+           <form action="page/new.html">
+               <button>Открыть договор</button>
+           </form>
+       </div>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>Серия-Номер</th>
+            <th>Дата заключения</th>
+            <th>Страхователь</th>
+            <th>Премия</th>
+            <th>Срок действия</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="contract: ${contracts}">
+            <td th:text="${contract.serialNumber}"></td>
+            <td th:text="${contract.dateStart}"></td>
+            <td th:text="${contract.policyholder}"></td>
+            <td th:text="${contract.award}"></td>
+            <td th:text="${contract.expirationDate}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

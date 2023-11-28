@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>order</title>
+</head>
+<body>
+
+<div class="calculate">
+    <form th:action="@{/candidates/create}" method="post" enctype="multipart/form-data">
+        <div>
+            <label>Страховая сумма</label>
+            <label>
+                <input type="text">
+            </label>
+        </div>
+        <div>
+            <label>Тип недвижимости</label>
+            <label>
+                <select name="estate">
+                    <option value="apartment">Квартира</option>
+                    <option value="house">Дом</option>
+                    <option value="room">Комната</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label>Год постройки</label>
+            <label>
+                <input type="text">
+            </label>
+        </div>
+        <div>
+            <label>Площадь постройки, кв.м</label>
+            <label>
+                <input type="text">
+            </label>
+        </div>
+        <div>
+            <label for="dateStart">Срок действия с: </label>
+            <input type="date" id="dateStart" name="dateStart"/>
+        </div>
+        <div>
+            <label for="dateEnd">по: </label>
+            <input type="date" id="dateEnd" name="dateEnd"/>
+        </div>
+        <div>
+            <button class="btn btn-primary w-100" type="submit">Рассчитать</button>
+        </div>
+        <div>
+            <label>Премия</label>
+            <label>
+                <input type="text">
+            </label>
+        </div>
+        <div>
+            <label>Дата расчета</label>
+            <label>
+                <input type="text">
+            </label>
+        </div>
+    </form>
+</div>
+</body>
+</html>
